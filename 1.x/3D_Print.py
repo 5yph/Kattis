@@ -16,16 +16,21 @@ statues = int(input())
 # to figure out how many printers we should print for fastest time.
 
 flag = True
+# First assume we print out another printer
 printers = 2
+days_for_printers = math.log(printers, 2)
+total = math.ceil(statues/printers) + days_for_printers
+last_total = math.ceil(statues)
 
 while flag:
 	# Takes more time to print printers
-    if math.log(printers, 2) >= math.ceil(statues/(printers/2)):
-        printers = printers/2
+    if total > last_total:
+        total = last_total
         flag = False
     else:
+        last_total = total
         printers = printers * 2 
+        days_for_printers = math.log(printers, 2)
+        total = math.ceil(statues/printers) + days_for_printers
 
-days_for_printers = math.log(printers, 2)
-total = math.ceil(statues/printers) + days_for_printers
 print(int(total))
