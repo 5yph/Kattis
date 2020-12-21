@@ -7,7 +7,9 @@ for i in range(tests):
     # we really only need to test one of these cases
     # We test addition/multiplication because they are commutative.
 
-    if (x + y == z) or (x + z == y) or (x*y == z) or (x*z == y):
+    if (x + y == z) or (x + z == y) or (y + z == x): # Test addition
+        print("Possible")
+    elif (x*y == z) or (x*z == y) or (y*z == x): # Test multiplication
         print("Possible")
     else:
         print("Impossible")
