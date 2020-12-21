@@ -3,6 +3,7 @@ tests = int(input())
 for i in range(tests):
     stores = int(input())
     positions = list(map(int, input().split()))
+    positions.sort()
     distance = 0
     # The optimal place to park is at the first store
     car = positions[0]
