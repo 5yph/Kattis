@@ -20,7 +20,7 @@ printers = 2
 
 while flag:
 	# Takes more time to print printers
-    if math.log(printers, 2) >= math.ceil(statues/printers):
+    if math.log(printers, 2) >= math.ceil(statues/(printers/2)):
         printers = printers/2
         flag = False
     else:
