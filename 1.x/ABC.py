@@ -1,10 +1,10 @@
-values = input().split()
+values = list(map(int, input().split()))
 order = input()
 
 values.sort()
-A = values[0]
-B = values[1]
-C = values[2]
+A = str(values[0])
+B = str(values[1])
+C = str(values[2])
 output = []
 
 for char in order:
