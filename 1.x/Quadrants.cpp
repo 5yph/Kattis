@@ -7,7 +7,7 @@ int main(){
 	cin >> x;
 	cin >> y;
 
-	if (x >> 0 && y > 0)
+	if (x > 0 && y > 0)
 	{
 		cout << 1 << endl;
 	} 
